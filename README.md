@@ -1,41 +1,87 @@
+# Pizza Creed Backend
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java Logo" width="100" height="100">
 </p>
 
-# REST-API-With-Spring-Boot
-
-Short description or tagline of your project.
+This repository contains the backend implementation for Pizza Creed, a pizza bakery in Galle Fort. The backend is responsible for managing pizza products and providing REST API endpoints for the mobile app.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
+- [Objectives](#objectives)
+- [Task](#task)
+- [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
+- [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
+## Objectives
 
-Provide a brief introduction to your project. Explain what it does, why it's useful, and any other relevant information that would help users understand the purpose of the project.
+1. Understanding SOA and Microservices architecture.
+2. Learning how to use EJB 3, Spring Framework, Spring MVC.
+3. Learning how to create a REST API.
+4. Understand MVC architecture.
 
-## Features
+## Task
 
-List the key features and functionalities of your project. You can use bullet points or create a table to present the features in an organized manner.
+Pizza Creed is a pizza bakery in Galle Fort. They don't run a pizza restaurant as usual pizza makers. Pizza Creed prepares pizza for orders only. They have several pizza products that may change from time to time according to the demand based on the season. But pizza has fixed regular sizes: Small, Regular, and Large.
+
+Price varies based on the product and size.
+
+Pizza Creed is planning to create a mobile app to place pizza orders. They have already selected a company to make the mobile app. You are chosen to create the Pizza Creed backend.
+
+1. Create a REST web service to add, view, and delete pizza products.
+   - Use the `POST /pizza` endpoint to add or edit a pizza product.
+   - Use the `GET /pizza/all` endpoint to view all available pizza products.
+   - Use the `GET /pizza/{id}` endpoint to view a specific pizza product by its ID.
+   - Use the `DELETE /pizza/delete/{id}` endpoint to delete a pizza product by its ID.
+
+## Technologies Used
+
+- Java 17
+- Spring Framework
+- Spring MVC
+- MySQL
 
 ## Installation
 
-Describe the steps required to install and set up your project. Include any dependencies that need to be installed and provide instructions for getting the project up and running.
+1. Clone this repository to your local machine.
+2. Configure the MySQL database by running the provided SQL scripts.
+3. Update the database connection details in the application configuration.
+4. Build and deploy the application to a Java application server.
 
 ## Usage
 
-Provide examples or instructions on how to use your project. Include code snippets or screenshots to help users understand how to utilize the different features of your project.
+1. Use the provided REST API endpoints to manage pizza products:
+   - Use the `POST /pizza` endpoint to add or edit a pizza product.
+   - Use the `GET /pizza/all` endpoint to view all available pizza products.
+   - Use the `GET /pizza/{id}` endpoint to view a specific pizza product by its ID.
+   - Use the `DELETE /pizza/delete/{id}` endpoint to delete a pizza product by its ID.
+
+## API Endpoints
+
+The following REST API endpoints are available for managing pizza products:
+
+- `POST /pizza`: Add or edit a pizza product.
+  - Use this endpoint to add a new pizza product or update an existing one.
+  - Request body should contain the details of the pizza product to be added or edited.
+  - If the pizza product already exists (based on its ID), it will be updated with the provided information. If it doesn't exist, a new pizza product will be created.
+- `GET /pizza/all`: View all available pizza products.
+- `GET /pizza/{id}`: View a specific pizza product by its ID.
+- `DELETE /pizza/delete/{id}`: Delete a pizza product by its ID.
 
 ## Contributing
 
-Explain how others can contribute to your project. Include guidelines for submitting bug reports, feature requests, or pull requests. You can also mention any specific coding conventions or standards that contributors should follow.
+Contributions to this project are welcome. If you have any suggestions, bug reports, or feature requests, please submit them via the issue tracker. If you would like to contribute code, please follow the standard guidelines for pull requests.
+
+## Developers
+
+- [Harshika Madhushani](https://github.com/harshikamadhushani)
+- [Royan Harsha](https://github.com/CHUKzi)
 
 ## License
 
-Specify the license under which your project is distributed. For example, you can use the MIT License, Apache License, or any other open-source license that suits your project. Include the full text of the license or provide a link to it.
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this code as per the terms of the license.
 
